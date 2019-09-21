@@ -11,5 +11,5 @@ public interface StudentServices {
 	public void changeStudentDetails(Student student);
 	public Student searchStudent(int code);
 	public List<Student> viewAllStudents();
-
+	public void updateStudent(Student student);
 }

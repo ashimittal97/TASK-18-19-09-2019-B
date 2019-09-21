@@ -56,6 +56,31 @@ public class basicController {
 		modelAndView.addObject("students", students);
 		return modelAndView;
 	}
+	
+	@RequestMapping("update")
+	public ModelAndView updateStudent(@RequestParam("rno") int rno){
+		Student student = studentServices.searchStudent(rno);
+	   
+		ModelAndView modelAndView = new ModelAndView("Update");
+		modelAndView.addObject("student", student);
+		
+		return modelAndView;
+		
+	}
+	
+	@RequestMapping("Updated")
+	public ModelAndView UpdatedInfo(@ModelAttribute("info") Student studentUpdate){
+		studentServices.updateStudent(studentUpdate);
+		ModelAndView modelAndView = new ModelAndView("Updated");
+		modelAndView.addObject("student", studentUpdate);
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("updateStudent")
+	public String Update(){
+		return "Enter";
+	}
 
 	@RequestMapping("inputpage")
 	public String showInputForm() {

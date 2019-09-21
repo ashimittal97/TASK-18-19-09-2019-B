@@ -16,5 +16,9 @@
 	<br>
 	
 	<hr>
+	<a href="updateStudent">UPDATE--STUDENTS--DETAILS</a>
+	<br>
+	
+	<hr>
 	</body>
 </html>

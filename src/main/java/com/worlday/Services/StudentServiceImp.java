@@ -40,4 +40,9 @@ public class StudentServiceImp  implements StudentServices{
 		return daoInterface.getAllStudents();
 	}
 
+	public void updateStudent(Student student) {
+		daoInterface.updateStudent(student);
+		
+	}
+
 }
